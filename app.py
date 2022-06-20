@@ -255,8 +255,8 @@ async def notify_fin():
     if r.status_code == 200:
         print('trainFin')
     else:
-        print(r.content)
-        
+        print('notify_fin error: ', r.content)
+
     return status
 
 # client manager에서 train fail 정보 확인
@@ -270,7 +270,7 @@ async def notify_fail():
     if r.status_code == 200:
         print('trainFin')
     else:
-        print(r.content)
+        print('notify_fail error: ', r.content)
 
     return status
 
